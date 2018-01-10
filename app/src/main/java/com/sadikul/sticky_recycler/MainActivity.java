@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public CharSequence getSectionHeader(int position) {
-                return leagues.get(position).getCountry().subSequence(0, 1);
+                return leagues.get(position).getCountry();
             }
         };
     }

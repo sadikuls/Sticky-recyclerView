@@ -4,6 +4,7 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +47,7 @@ public class RecyclerSectionItemDecoration extends RecyclerView.ItemDecoration {
 
         if (headerView == null) {
             headerView = inflateHeaderView(parent);
-            header = (TextView) headerView.findViewById(R.id.list_item_section_text);
+            header =  headerView.findViewById(R.id.list_item_section_text);
             fixLayoutSize(headerView,
                           parent);
         }
@@ -57,6 +58,8 @@ public class RecyclerSectionItemDecoration extends RecyclerView.ItemDecoration {
             final int position = parent.getChildAdapterPosition(child);
 
             CharSequence title = sectionCallback.getSectionHeader(position);
+
+            Log.d("Header",title+"");
             header.setText(title);
             if (!previousHeader.equals(title) || sectionCallback.isSection(position)) {
                 drawHeader(c,child,headerView);

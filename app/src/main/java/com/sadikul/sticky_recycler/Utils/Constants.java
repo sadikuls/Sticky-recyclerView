@@ -5,6 +5,6 @@ package com.sadikul.sticky_recycler.Utils;
  */
 
 public class Constants {
-    public static final String baseUrl= "http://holoduke.nl/footapi/";
-    public static final String leagueList= "fixtures/feed_livenow.json?lang=gb";
+    public static final String baseUrl= "http://sadikulsathi.com/";//http://sadikulsathi.com/leagues.json
+    public static final String leagueList= "leagues.json";
 }

@@ -38,7 +38,7 @@ public class LeagueAdapter extends RecyclerView.Adapter<LeagueAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Leagues leagues = this.leagues.get(position);
-        holder.fullName.setText(leagues.getCountry());
+        holder.fullName.setText(leagues.getCountry()+" "+leagues.getLeagues().get(0).getLeague());
     }
 
     @Override
